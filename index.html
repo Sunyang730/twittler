@@ -40,20 +40,22 @@
         var currentTime = function(){
           var time = new Date();
           var hours = time.getHours();
-          var mintues = time.getMinutes();
+          var minutes = time.getMinutes();
           var seconds = time.getSeconds();
           var ampm = "AM";
-          if(hours > 12){
-            hours = hours - 12;
+          if(hours >= 12){
             ampm = "PM";
           }
-          if(mintues < 10){
-            minutes = "0" + mintues;
+          if(hours > 12){
+            hours = hours - 12;
+          }
+          if(minutes < 10){
+            minutes = "0" + minutes;
           }
           if(seconds < 10){
             seconds = "0" + seconds;
           }
-          return hours + ":" + mintues + ":" + seconds + ampm;
+          return hours + ":" + minutes + ":" + seconds + ampm;
         };
         //*** Create a button for auto and manual tweets.
         //*** Create a function to generate tweets.
