@@ -1,8 +1,47 @@
 body {
 	background-color: #55ACEE;
+	margin: 0px;
+	
 
 }
 div {
-	border: 1px solid red ;
-	text-align: center;
+	/*border: 1px solid red ;*/
+	
 }
+#header{
+	height: 48px;
+	width: 100%;
+	text-align: center;
+	z-index: 1000;
+	position: fixed;
+	background-color: #F5F8FA;
+}
+#background{
+	background-image: url("images/background.jpg"); 
+	height: 100%;
+	width: 100%;
+	top: 48px;
+	position: fixed;
+	z-index: -1;
+}
+#middle{ 
+	top: 48px;
+	height: 100%;
+	width: 100%;
+	padding: 50px;
+	position: absolute;
+}
+#left, #right{
+	padding: 20px;
+	float: left;
+}
+#mid_left, #mid_right{
+	background-color: #F5F8FA;
+	width: 500px;
+	margin: 0px auto;
+}
+img{
+	top: 15px;
+	position:relative;
+}
+ 

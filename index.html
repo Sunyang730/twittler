@@ -14,6 +14,8 @@
         var $body = $('body');
         //$body.html('');
 
+        
+
         //Show the user new tweets somehow. (You can show them automatically as they're created, or create a button that displays new tweets.)
         //Display the timestamps of when the tweets were created.
         //Design your interface so that you want to look at and use the product you're making.
@@ -37,6 +39,7 @@
         
         //*** Create a function for setting up a correct time format.
         //*** Addition: should display dates.
+        //*** Addition: Post before the auto load time should be load all at once.
 
         var currentTime = function(time){
           var hours = time.getHours();
@@ -58,12 +61,11 @@
           return hours + ":" + minutes + ":" + seconds + ampm;
         };
 
-        
+
         //*** Create a button for auto and manual tweets.
         //*** Create a function to generate tweets.
         //*** Create a CSS 
-    
-
+  
 
 
         var index = 0;
@@ -71,12 +73,10 @@
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
           $tweet.text(currentTime(tweet.created_at) +' @' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
+          $tweet.appendTo("#mid_right");
           index +=1;
-        }, 5000);
-
-
-        
+        }, 1000);
+      
 
 
 
@@ -85,6 +85,29 @@
       });
 
     </script>
+    <div id="page">
+      <div id="header"> 
+        <img id="logo" src="images/Twitter_logo_blue.png" height="40%" text-aligh="center"> 
+      </div>
+      <div id="background"></div>
+      <div id="middle">
+        <div id="left">
+          <div id= "mid_left"> This is middle left</div>
+        </div>
+        <div id="right">  
+          <div id= "mid_right">
+            <div>This is middle right</div>
+            <div>This is middle right</div>
+            <div>This is middle right</div>
+            <div>This is middle right</div>
+            <div>This is middle right</div>
+            <div>This is middle right</div>
+            <div>This is middle right</div>
+            <div>This is middle right</div>
+          </div>
+        </div>
+      </div>
+    </div>
     
   </body>
 </html>
