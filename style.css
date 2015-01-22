@@ -28,17 +28,13 @@ div {
 	top: 48px;
 	height: 100%;
 	width: 100%;
-	padding: 50px;
 	position: absolute;
+	text-align: center;
 }
-#left, #right{
-	padding: 20px;
-	float: left;
-}
-#mid_left, #mid_right{
+#mid_tweet{
 	background-color: #F5F8FA;
 	width: 500px;
-	margin: 0px auto;
+	top: 20px;
 }
 img{
 	top: 15px;

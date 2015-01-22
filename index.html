@@ -73,7 +73,7 @@
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
           $tweet.text(currentTime(tweet.created_at) +' @' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo("#mid_right");
+          $tweet.appendTo("#mid_tweet");
           index +=1;
         }, 1000);
       
@@ -87,27 +87,12 @@
     </script>
     <div id="page">
       <div id="header"> 
-        <img id="logo" src="images/Twitter_logo_blue.png" height="40%" text-aligh="center"> 
+        <img id="logo" src="images/Twitter_logo_blue.png" height="40%"> 
       </div>
       <div id="background"></div>
       <div id="middle">
-        <div id="left">
-          <div id= "mid_left"> This is middle left</div>
-        </div>
-        <div id="right">  
-          <div id= "mid_right">
-            <div>This is middle right</div>
-            <div>This is middle right</div>
-            <div>This is middle right</div>
-            <div>This is middle right</div>
-            <div>This is middle right</div>
-            <div>This is middle right</div>
-            <div>This is middle right</div>
-            <div>This is middle right</div>
-          </div>
-        </div>
+        <div id= "mid_tweet">This is a Test</div>
       </div>
-    </div>
-    
+    </div>    
   </body>
 </html>
