@@ -28,19 +28,25 @@ div {
 }
 #middle{ 
 	top: 48px;
-	height: 100%;
-	width: 100%;
-	position: absolute;
-}
-#mid_tweet{
-	position: absolute;
-	background-color: #F5F8FA;
 	width: 500px;
-	top: 20px;
-	left: 30%;
+	margin: 0 auto;
+	position: relative;
+}
+#midTweet{
+	position: relative;
+	
+}
+.tweetPost{
+	height: 40px;
+	border: 1px solid #55AECC;
+	border-radius: 10px;
+	padding: 5px;
+	margin-top:5px;
+	background-color: #F5F8FA;
 }
 img{
 	top: 15px;
 	position:relative;
 }
+
  

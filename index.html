@@ -71,9 +71,9 @@
         var index = 0;
         setInterval(function(){
           var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
+          var $tweet = $('<div class="tweetPost"></div>');
           $tweet.text(currentTime(tweet.created_at) +' @' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo("#mid_tweet");
+          $tweet.appendTo("#midTweet");
           index +=1;
         }, 1000);
       
@@ -91,7 +91,7 @@
       </div>
       <div id="background"></div>
       <div id="middle">
-        <div id= "mid_tweet">This is a Test</div>
+        <div id= "midTweet">This is a Test</div>
       </div>
     </div>    
   </body>
