@@ -61,26 +61,26 @@
           return hours + ":" + minutes + ":" + seconds + ampm;
         };
 
+        //*** Link on click will show only that user's post
+
+        $('a').on('click', function(){
+            $('.mracus').parent().hide();
+  
+        });
 
         //*** Create a button for auto and manual tweets.
         //*** Create a function to generate tweets.
-        //*** Create a CSS 
   
-
-
         var index = 0;
-        setInterval(function(){
+        var autoTweet = setInterval(function(){
           var tweet = streams.home[index];
           var $tweet = $('<div class="tweetPost"></div>');
-          $tweet.text(currentTime(tweet.created_at) +' @' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo("#midTweet");
+          var userLink = '<a class="'+tweet.user+'">' + tweet.user + '</a>';
+          $tweet.html(currentTime(tweet.created_at) +' @' +userLink+ ': ' + tweet.message);
+          $tweet.appendTo("#middle");
           index +=1;
         }, 1000);
-      
-
-
-
-  
+ 
 
       });
 
@@ -91,7 +91,6 @@
       </div>
       <div id="background"></div>
       <div id="middle">
-        <div id= "midTweet">This is a Test</div>
       </div>
     </div>    
   </body>
